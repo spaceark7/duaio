@@ -152,10 +152,15 @@ const HomePage = () => {
           <h2 className='font-bold text-2xl text-mGradientLeft'>
             Hubungi Kami
           </h2>
-          <h2 className=' text-base'>Dapatkan penawaran terbaik</h2>
-          <p className='text-sm mt-2'>
+          <h2 className='text-sm'>Dapatkan penawaran terbaik</h2>
+          <p className=' mt-2 text-xs text-gray-500 mt-2'>
             Kami terbuka untuk konsultasi dan negosiasi
           </p>
+          <a className='mt-7' href='#'>
+            <h2 className='bg-green-500 rounded-md text-sm font-medium text-white px-2 py-1 w-max'>
+              WhatsApp
+            </h2>
+          </a>
         </div>
         <div className='w-1/2 h-60'>
           <img
