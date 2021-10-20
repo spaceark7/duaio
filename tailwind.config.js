@@ -18,6 +18,9 @@ module.exports = {
         employee: `url('data/employee.jpg')`,
         tech: `url('data/tech.jpg')`,
       },
+      height: {
+        almost: '80vh',
+      },
     },
   },
   variants: {

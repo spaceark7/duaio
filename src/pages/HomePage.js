@@ -51,7 +51,7 @@ const HomePage = () => {
         image='/images/ss.png'
         isGradient={false}
       />
-      <div className='flex flex-col w-full overflow-hidden '>
+      <div className='flex flex-col'>
         {data.map((item) => (
           <ProductSummary
             key={item.id}
@@ -75,7 +75,7 @@ const HomePage = () => {
         </a>
       </div>
 
-      <div className='bg-white'>
+      <div className='bg-white pb-6'>
         <ProductBrief
           image='/images/bm.png'
           title='ATTENDANCE & COMMUNICATION SYSTEM'
@@ -84,7 +84,7 @@ const HomePage = () => {
         />
         <div className='px-4 py-1  '>
           <div className='px-4 pt-2 text-left '>
-            <h2 className='font-semibold text-lg text-mGradientLeft border-b-2 border-mGradientLeft w-max border-opacity-25 '>
+            <h2 className='font-semibold text-sm text-mGradientLeft border-b-2 border-mGradientLeft w-max border-opacity-25 '>
               Perangkat Absensi
             </h2>
           </div>
@@ -106,7 +106,7 @@ const HomePage = () => {
           />
 
           <div className='px-4 pt-8 text-left'>
-            <h2 className='font-semibold text-lg text-mGradientLeft border-b-2 border-mGradientLeft w-max border-opacity-25'>
+            <h2 className='font-semibold text-sm text-mGradientLeft border-b-2 border-mGradientLeft w-max border-opacity-25'>
               Perangkat Komunikasi
             </h2>
           </div>
@@ -117,13 +117,52 @@ const HomePage = () => {
             desc='Jaringan telepon gedung dengan menggunakan perangkat PABX dan sistem wiring yang handal.'
           />
 
-          <div className='px-4 pt-4 pb-2'>
+          <div className='px-4 pt-10 pb-2'>
             <a href='#'>
               <p className='mx-auto font-semibold bg-transparent w-max py-2 px-4 rounded-md text-mGradientLeft border-2 border-mGradientLeft'>
-                Lihat info selengkapnya
+                Lihat selengkapnya
               </p>
             </a>
           </div>
+        </div>
+      </div>
+
+      <div className='w-full bg-white'>
+        <div className='h-1 w-1/4 mx-auto bg-gray-200 px-10 rounded-full'></div>
+      </div>
+
+      <div className='pt-6 bg-white'>
+        <div className='bg-mGradientLeft'>
+          <div className='px-8 py-6'>
+            <h2 className='text-center text-xl font-semibold text-white'>
+              Tentang Kami
+            </h2>
+            <p className='text-sm mt-2 text-white text-center text-opacity-75 leading-5'>
+              Kami adalah tenaga ahli yang bergerak dibidang maintenance,
+              instalasi dan perbaikan listrik serta perlengkapan keamanan
+              gedung.
+            </p>
+          </div>
+        </div>
+        <div className='bg-tech bg-cover bg-no-repeat h-60  backdrop-filter backdrop-grayscale w-full'></div>
+      </div>
+
+      <div className='flex w-full flex-row h-auto bg-white pt-8 '>
+        <div className='pl-6 pr-2 w-3/4 flex flex-col justify-center '>
+          <h2 className='font-bold text-2xl text-mGradientLeft'>
+            Hubungi Kami
+          </h2>
+          <h2 className=' text-base'>Dapatkan penawaran terbaik</h2>
+          <p className='text-sm mt-2'>
+            Kami terbuka untuk konsultasi dan negosiasi
+          </p>
+        </div>
+        <div className='w-1/2 h-60'>
+          <img
+            className='w-full h-full object-cover  object-left-top '
+            src='/images/contact.webp'
+            alt=''
+          />
         </div>
       </div>
     </div>

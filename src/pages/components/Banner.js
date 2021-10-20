@@ -2,7 +2,7 @@ import React from 'react'
 
 const Banner = ({ image, title, subtitle, desc }) => {
   return (
-    <div className='w-full h-full grid grid-flow-row grid-rows-4  bg-gradient-to-r from-mGradientLeft to-mGradientRight'>
+    <div className='w-full h-almost grid grid-flow-row grid-rows-4  bg-gradient-to-r from-mGradientLeft to-mGradientRight'>
       <div className='px-8 pt-8 row-start-1 flex items-center justify-center row-span-2'>
         <img className='w-full ' src={image} alt='illustration' />
       </div>
