@@ -1,10 +1,11 @@
 import React from 'react'
-import data from '../data/DataSummary'
-import Banner from './components/Banner'
-import CardACSItem from './components/CardACSItem'
-import CardIcon from './components/CardIcon'
-import ProductBrief from './components/ProductBrief'
-import ProductSummary from './components/ProductSummary'
+import data from '../data/DataCategory'
+import Banner from '../components/Banner'
+import CardACSItem from '../components/CardACSItem'
+import CardIcon from '../components/CardIcon'
+import ProductBrief from '../components/ProductBrief'
+import ProductSummary from '../components/ProductSummary'
+import { Link } from 'react-router-dom'
 
 const HomePage = () => {
   return (
@@ -21,9 +22,9 @@ const HomePage = () => {
       <div className={` bg-white pb-10 py-6 `}>
         <h1
           className={`font-sans text-mGradientLeft  px-4
-            font-bold text-2xl tracking-wide mx-auto text-center `}
+            font-bold text-xl tracking-wide mx-auto text-center `}
         >
-          Keunggulan Kami
+          KEUNGGULAN KAMI
         </h1>
 
         <div className='flex bg-white flex-row px-2 justify-center gap-5 pt-4 '>
@@ -46,7 +47,7 @@ const HomePage = () => {
       </div>
 
       <ProductBrief
-        title='SISTEM KEAMANAN GEDUNG'
+        title='SISTEM KEAMANAN'
         desc='Tingkatkan keamanan & keselamatan dengan menggunakan secure system dari kami.'
         image='/images/ss.png'
         isGradient={false}
@@ -61,24 +62,11 @@ const HomePage = () => {
           />
         ))}
       </div>
-      <div className='bg-mGradientRight pb-8'>
-        <ProductBrief
-          isGradient={true}
-          title='PEMELIHARAAN GEDUNG'
-          image='/images/maintenance.png'
-          desc='Berpengalaman lebih dari 10 tahun instalasi listrik untuk gedung - gedung besar, juga pemasangan jalur kabel telepon & jaringan internet.'
-        />
-        <a href='#'>
-          <p className='mx-auto font-semibold bg-transparent w-max py-2 px-4 rounded-md text-white border-2 border-white'>
-            Lihat info selengkapnya
-          </p>
-        </a>
-      </div>
 
       <div className='bg-white pb-6'>
         <ProductBrief
           image='/images/bm.png'
-          title='ATTENDANCE & COMMUNICATION SYSTEM'
+          title='SISTEM ABSENSI & KOMUNIKASI'
           desc='Permudah proses absensi karyawan secara mutakhir dan percepat komunikasi lokal secara handal.'
           isGradient={false}
         />
@@ -127,13 +115,24 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className='w-full bg-white'>
-        <div className='h-1 w-1/4 mx-auto bg-gray-200 px-10 rounded-full'></div>
+      <div className='bg-mGradientRight pb-8'>
+        <ProductBrief
+          isGradient={true}
+          title='PEMELIHARAAN GEDUNG'
+          image='/images/maintenance.png'
+          desc='Berpengalaman lebih dari 10 tahun instalasi listrik untuk gedung - gedung besar, juga pemasangan jalur kabel telepon & jaringan internet.'
+        />
+        <Link to='/detail/surveillance'>
+          <p className='mx-auto font-semibold bg-transparent w-max py-2 px-4 rounded-md text-white border-2 border-white'>
+            Lihat info selengkapnya
+          </p>
+        </Link>
       </div>
 
-      <div className='pt-6 bg-white'>
+      <div className='bg-white'>
         <div className='bg-mGradientLeft'>
-          <div className='px-8 py-6'>
+          <div className='bg-tech bg-cover bg-no-repeat h-72  backdrop-filter backdrop-grayscale w-full'></div>
+          <div className='px-8 pt-2 pb-6'>
             <h2 className='text-center text-xl font-semibold text-white'>
               Tentang Kami
             </h2>
@@ -144,32 +143,48 @@ const HomePage = () => {
             </p>
           </div>
         </div>
-        <div className='bg-tech bg-cover bg-no-repeat h-60  backdrop-filter backdrop-grayscale w-full'></div>
       </div>
 
-      <div className='flex w-full flex-row h-auto bg-white pt-8 '>
-        <div className='pl-6 pr-2 w-3/4 flex flex-col justify-center '>
+      <div className='flex w-full flex-col h-auto bg-white pt-8 '>
+        <div className='pl-6 pr-2 w-full flex flex-col justify-center items-center '>
           <h2 className='font-bold text-2xl text-mGradientLeft'>
             Hubungi Kami
           </h2>
-          <h2 className='text-sm'>Dapatkan penawaran terbaik</h2>
-          <p className=' mt-2 text-xs text-gray-500 mt-2'>
-            Kami terbuka untuk konsultasi dan negosiasi
+
+          <p className=' mt-2 text-sm text-gray-500 mt-2 text-center'>
+            Dapatkan penawaran terbaik sekarang! kami terbuka untuk konsultasi
+            dan negosiasi.
           </p>
-          <a className='mt-7' href='#'>
-            <h2 className='bg-green-500 rounded-md text-sm font-medium text-white px-2 py-1 w-max'>
-              WhatsApp
-            </h2>
+          <a className='mt-4 w-max' href='#'>
+            <div className='flex  border-2 border-green-500 rounded-sm w-max'>
+              <div className='bg-green-500 m-0 p-0'>
+                <h2 className='text-sm p-1  font-medium text-white'>
+                  WhatsApp
+                </h2>
+              </div>
+              <div className='p-1'>
+                <h2 className='text-sm font-medium text-green-500'>
+                  klik disini
+                </h2>
+              </div>
+            </div>
           </a>
         </div>
-        <div className='w-1/2 h-60'>
+        <div className='w-full h-72 pt-8'>
           <img
-            className='w-full h-full object-cover  object-left-top '
+            className='w-1/2 mx-auto h-full object-cover  object-left-top '
             src='/images/contact.webp'
             alt=''
           />
         </div>
       </div>
+      <footer className='w-full px-4  bg-mGradientRight flex flex-col justify-between items-center py-2 gap-2 '>
+        <img className='w-1/3 opacity-40' src='/images/logo_big.png' alt='' />
+        <h2 className='text-white text-xs opacity-50 text-center w-3/4'>
+          Ruko inkopal blok C. Sunter boulevard barat, Kelapa Gading, Jakarta
+          Utara
+        </h2>
+      </footer>
     </div>
   )
 }

@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundPosition: {
+        right: 'center right ',
+      },
       colors: {
         mGradientLeft: {
           DEFAULT: '#0575E6',
@@ -15,11 +18,11 @@ module.exports = {
         display: 'Orbitron',
       },
       backgroundImage: {
-        employee: `url('data/employee.jpg')`,
-        tech: `url('data/tech.jpg')`,
+        tech: `url('data/tech.webp')`,
+        cctv: `url('data/cctv_banner.webp')`,
       },
       height: {
-        almost: '80vh',
+        almost: '70vh',
       },
     },
   },
