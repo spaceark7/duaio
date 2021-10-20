@@ -16,6 +16,7 @@ module.exports = {
       },
       backgroundImage: {
         employee: `url('data/employee.jpg')`,
+        tech: `url('data/tech.jpg')`,
       },
     },
   },

@@ -13,7 +13,7 @@ const ProductBrief = ({ title, desc, image, isGradient }) => {
       <h1
         className={`font-sans ${
           isGradient ? 'text-white' : 'text-mGradientLeft'
-        }  font-bold text-2xl tracking-wide mx-auto text-center `}
+        }  font-bold text-xl tracking-wide mx-auto text-center `}
       >
         {title}
       </h1>
@@ -24,7 +24,7 @@ const ProductBrief = ({ title, desc, image, isGradient }) => {
       >
         {desc}
       </p>
-      <img className='mx-auto w-3/4 py-2 ' src={image} alt='' />
+      <img className='mx-auto w-3/4 py-2 pt-6 ' src={image} alt='' />
     </div>
   )
 }
