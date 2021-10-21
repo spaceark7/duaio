@@ -1,6 +1,13 @@
 import React from 'react'
+import SwiperCore from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/swiper-bundle.css'
+import 'swiper/components/pagination/pagination.min.css'
 
 import data_detail from '../data/DataDetail'
+import pagination from 'swiper/components/pagination'
+
+SwiperCore.use([pagination])
 
 const DetailPage = ({ match }) => {
   const detail = data_detail.find(
@@ -41,10 +48,57 @@ const DetailPage = ({ match }) => {
         </div>
 
         <div className='py-4 pb-8'>
-          <h2 className='text-center text-lg font-semibold text-mGradientLeft'>
-            Terintegrasi dengan ponsel pintar
+          <h2 className='text-center text-lg mx-auto leading-6 w-1/2 mb-4 font-semibold text-mGradientLeft'>
+            Terintegrasi dengan Perangkat Mobile
           </h2>
           <img src='/images/cctv_integration.png' alt='' />
+          <p className='text-xs text-gray-500 px-4 text-center'>
+            Selain Terintegrasi dengan monitor kendali & PTZ controller,Sistem
+            CCTV kami juga memungkinkan anda untuk mengakses dengan perangkat
+            mobile anda.
+          </p>
+
+          <Swiper
+            loop='true'
+            slidesPerView={2}
+            spaceBetween={20}
+            centeredSlides='true'
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+          >
+            <SwiperSlide>
+              <div className='w-full h-1/2'>
+                <img src='/images/bm.png' alt='' />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='w-full h-1/2'>
+                <img src='/images/bm.png' alt='' />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='w-full h-1/2'>
+                <img src='/images/bm.png' alt='' />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='w-full h-1/2'>
+                <img src='/images/bm.png' alt='' />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='w-full h-1/2'>
+                <img src='/images/bm.png' alt='' />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='w-full h-1/2'>
+                <img src='/images/bm.png' alt='' />
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </div>
