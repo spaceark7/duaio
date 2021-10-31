@@ -1,147 +1,157 @@
 import React from 'react'
-import data from '../data/DataCategory'
 import Banner from '../components/Banner'
-import CardACSItem from '../components/CardACSItem'
-import CardIcon from '../components/CardIcon'
 import ProductBrief from '../components/ProductBrief'
-import ProductSummary from '../components/ProductSummary'
 import { Link } from 'react-router-dom'
+import { BsArrowUpRightSquareFill } from 'react-icons/bs'
+
+import SwiperCore from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/swiper-bundle.css'
+import 'swiper/components/pagination/pagination.min.css'
+import 'swiper/components/navigation/navigation.min.css'
+import pagination from 'swiper/components/pagination'
+import navigation from 'swiper/components/navigation'
+
+SwiperCore.use([pagination, navigation])
 
 const HomePage = () => {
   return (
     <div className='w-full h-full'>
       <Banner
         image='/images/logo_big.png'
-        title='Solusi Terbaik'
-        subtitle='Untuk bisnis & anda.'
-        desc='Dengan pesatnya perkembangan zaman dan semakin mutakhirnya teknologi,
-          kami hadir untuk memberikan solusi keamanan & kebutuhan perusahaan
-          anda.'
+        title='All In One Solution untuk Bisnis dan Perusahaan Anda.'
+        subtitle=''
+        desc='Kami hadir sebagai solusi terbaik untuk pemasangan CCTV keamanan, Sistem Alarm Keamanan Gedung, Instalasi Listrik Rumah, Instalasi Jaringan kabel atau nirkabel, dan perlengkapan gedung lainnya.'
       />
 
-      <div className={` bg-white pb-10 py-6 `}>
-        <h1
-          className={`font-sans text-mGradientLeft  px-4
-            font-bold text-xl tracking-wide mx-auto text-center `}
-        >
-          KEUNGGULAN KAMI
-        </h1>
-
-        <div className='flex bg-white flex-row px-2 justify-center gap-5 pt-4 '>
-          <CardIcon image='images/q.png' title=' Berkualitas' />
-          <CardIcon image='images/d.png' title='Daya Tahan' />
-          <CardIcon image='images/n_1.png' title='Harga Nego' />
+      <div className={` bg-white h-screen py-12 px-4 `}>
+        <div className='pb-6 px-4 pt-4 h-4/6 w-full'>
+          <img
+            className='w-screen h-full rounded-lg object-left object-cover transition transform    hover:-translate-y-4 duration-500 ease-out'
+            src='/images/alarm_building.webp'
+            alt=''
+          />
         </div>
 
-        <p
-          className={`text-center text-gray-500 leading-4 text-sm w-11/12 mx-auto px-2 pt-4`}
-        >
-          Dengan pengalaman lebih dari 7 Tahun dibidang instalasi perlengkapan
-          gedung, kami memprioritaskan kualitas dan daya guna tahan lama bagi
-          setiap klien kami.
-        </p>
+        <div className='h-2/6 py-2'>
+          <h1
+            className={`font-sans text-mGradientLeft 
+            font-semibold text-2xl px-4 mx-auto `}
+          >
+            Mutakhirkan Operasional Perusahaan Anda.
+          </h1>
+
+          <p className={` text-gray-800 leading-2 text-base  px-4  pt-4`}>
+            Dengan perkembangan era teknologi yang cepat, dibutuhkan sistem yang
+            handal dan perlengkapan mumpuni untuk memenuhi kebutuhan dan
+            mendukung operasional perusahaan.
+          </p>
+        </div>
       </div>
 
-      <div className='w-full bg-white'>
-        <div className='h-1 w-1/4 mx-auto bg-gray-200 px-10 rounded-full'></div>
+      <div className='w-screen h-full pb-10 bg-white'>
+        <Swiper
+          autoHeight
+          style={{
+            '--swiper-navigation-color': '#fff',
+            '--swiper-pagination-color': '#fff',
+            '--swiper-navigation-size': '24px',
+          }}
+          navigation
+          loop='true'
+          slidesPerView={1}
+          spaceBetween={10}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+        >
+          <SwiperSlide>
+            <div className='h-80 w-full bg-business bg-cover px-12'>
+              <h1
+                className={`font-sans pt-10 text-white
+         font-light  text-3xl   mx-auto pb-4 pr-10 `}
+              >
+                Kami Menawarkan Harga Yang Terjangkau Untuk Anda.
+              </h1>
+              <p className='text-white pt-6 text-opacity-80 '>
+                Biaya yang kami tawarkan relatif murah dan kompetitif.
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='h-80 w-full bg-engineer  bg-cover px-12'>
+              <h1
+                className={`font-sans pt-10 text-white
+         font-light  text-3xl   mx-auto pb-4 pr-10 `}
+              >
+                Kualitas Terbaik Dalam Pengerjaan Menjadi Prioritas Utama Kami.
+              </h1>
+              <p className='text-white pt-6 text-opacity-80 '>
+                Serta pemeliharaan yang mudah dilakukan.
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='h-80 w-full bg-technician bg-cover px-12'>
+              <h1
+                className={`font-sans pt-10 text-white
+         font-light  text-3xl   mx-auto pb-4 pr-10 `}
+              >
+                Daya Pakai Tahan Lama Hingga 15 Tahun.
+              </h1>
+              <p className='text-white pt-6 text-opacity-80 '>
+                Perangkat yang kami gunakan selalu mengikuti model terbaru &
+                terbaik.
+              </p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
 
       <ProductBrief
-        title='SISTEM KEAMANAN'
-        desc='Tingkatkan keamanan & keselamatan dengan menggunakan secure system dari kami.'
-        image='/images/ss.png'
-        isGradient={false}
+        title='Pantau Keadaan Sekitar Dengan Lebih Ringkas'
+        desc='Dengan Sistem keamanan CCTV yang kami sediakan, Anda bisa dengan leluasa memantau keadaan sekitar secraa lebih mudah dengan hanya melihat layar.'
+        image='/images/cctv_monitor.jpg'
+        isGrey={true}
+        link='/detail/cctv'
       />
-      <div className='flex flex-col'>
-        {data.map((item) => (
-          <ProductSummary
-            key={item.id}
-            productName={item.product_name}
-            image={item.image_path}
-            desc={item.description}
-          />
-        ))}
-      </div>
+      <ProductBrief
+        title='Kendali Penuh Keamanan Akses Sekitar Anda'
+        desc='Kami memberikan layanan pemasangan Sistem Alarm Gedung agar anda bisa mengontrol setiap akses sekitar anda.'
+        image='images/security.jpg'
+        isGrey={false}
+      />
 
-      <div className='bg-white pb-6'>
-        <ProductBrief
-          image='/images/bm.png'
-          title='SISTEM ABSENSI & KOMUNIKASI'
-          desc='Permudah proses absensi karyawan secara mutakhir dan percepat komunikasi lokal secara handal.'
-          isGradient={false}
-        />
-        <div className='px-4 py-1  '>
-          <div className='px-4 pt-2 text-left '>
-            <h2 className='font-semibold text-sm text-mGradientLeft border-b-2 border-mGradientLeft w-max border-opacity-25 '>
-              Perangkat Absensi
-            </h2>
-          </div>
-          <CardACSItem
-            image='/images/fp.png'
-            productName='Finger Print'
-            desc='Perangkat absensi yang menggunakan sidik jari sebagai pengenal.'
-          />
+      <ProductBrief
+        image='/images/employee_biometric.jpg'
+        title='Lebih Akurat & Mudah Digunakan.'
+        desc='Kami menyediakan perangkat attendace seperti FIngerprint, Face Detection dan RFID. Kami juga menyediakan pemasangan jalur telepon kantor (PABX).'
+        isGrey={true}
+      />
 
-          <CardACSItem
-            image='/images/fr.png'
-            productName='Face Recognition'
-            desc='Sistem pengenal wajah untuk absensi sangat praktis dan akurat.'
-          />
-          <CardACSItem
-            image='/images/rfid.png'
-            productName='RFID Reader'
-            desc='Perangkat absensi yang menggunakan kartu sebagai tanda pengenal.'
-          />
+      <ProductBrief
+        isGradient={true}
+        title='Penanganan Jaringan Telepon & Internet Semakin Praktis'
+        image='/images/network_cable.jpg'
+        desc='Tak perlu repot memelihara perlengkapan gedung/kantor anda. Kami disini siap melayani semua kebutuhan penunjang operasional anda.'
+      />
 
-          <div className='px-4 pt-8 text-left'>
-            <h2 className='font-semibold text-sm text-mGradientLeft border-b-2 border-mGradientLeft w-max border-opacity-25'>
-              Perangkat Komunikasi
-            </h2>
-          </div>
-
-          <CardACSItem
-            image='/images/phone.png'
-            productName='Telepon Kantor'
-            desc='Jaringan telepon gedung dengan menggunakan perangkat PABX dan sistem wiring yang handal.'
-          />
-
-          <div className='px-4 pt-10 pb-2'>
-            <a href='#'>
-              <p className='mx-auto font-semibold bg-transparent w-max py-2 px-4 rounded-md text-mGradientLeft border-2 border-mGradientLeft'>
-                Lihat selengkapnya
-              </p>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className='bg-mGradientRight pb-8'>
-        <ProductBrief
-          isGradient={true}
-          title='PEMELIHARAAN GEDUNG'
-          image='/images/maintenance.png'
-          desc='Berpengalaman lebih dari 10 tahun instalasi listrik untuk gedung - gedung besar, juga pemasangan jalur kabel telepon & jaringan internet.'
-        />
-        <Link to='/detail/surveillance'>
-          <p className='mx-auto font-semibold bg-transparent w-max py-2 px-4 rounded-md text-white border-2 border-white'>
-            Lihat info selengkapnya
-          </p>
-        </Link>
-      </div>
-
-      <div className='bg-white'>
-        <div className='bg-mGradientLeft'>
-          <div className='bg-tech bg-cover bg-no-repeat h-72  backdrop-filter backdrop-grayscale w-full'></div>
-          <div className='px-8 pt-2 pb-6'>
-            <h2 className='text-center text-xl font-semibold text-white'>
-              Tentang Kami
-            </h2>
-            <p className='text-sm mt-2 text-white text-center text-opacity-75 leading-5'>
-              Kami adalah tenaga ahli yang bergerak dibidang maintenance,
-              instalasi dan perbaikan listrik serta perlengkapan keamanan
-              gedung.
-            </p>
-          </div>
+      <div className='w-full h-96 bg-blend-screen bg-tech bg-cover bg-left py-6 px-8 pr-12 '>
+        <h1
+          className={`font-sans pt-10 text-white
+         font-light  text-4xl  mx-auto pb-4`}
+        >
+          Kami berkomitmen untuk menjadi solusi layanan bagi bisnis anda.
+        </h1>
+        <div className='py-6 '>
+          <Link
+            className='flex items-center gap-2 bg-mGradientLeft w-max px-2 py-1 rounded-md transition duration-300 hover:bg-green-500 text-white   transition '
+            to='/'
+          >
+            <h2 className='font-semibold '>Ambil Tawaran</h2>
+            <BsArrowUpRightSquareFill className='hover:animate-bounce' />
+          </Link>
         </div>
       </div>
 
@@ -178,7 +188,7 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <footer className='w-full px-4  bg-mGradientRight flex flex-col justify-between items-center py-2 gap-2 '>
+      <footer className='w-full py-4 px-4  bg-mGradientRight flex flex-col justify-between items-center py-2 gap-2 '>
         <img className='w-1/3 opacity-40' src='/images/logo_big.png' alt='' />
         <h2 className='text-white text-xs opacity-50 text-center w-3/4'>
           Ruko inkopal blok C. Sunter boulevard barat, Kelapa Gading, Jakarta

@@ -20,9 +20,15 @@ module.exports = {
       backgroundImage: {
         tech: `url('data/tech.webp')`,
         cctv: `url('data/cctv_banner.webp')`,
+        alarm: `url('data/alarm_building.webp')`,
+        contact: `url('data/contact_bg copy.webp')`,
+        biometric: `url('data/finger_scanner.webp')`,
+        business: `url('data/business.webp')`,
+        engineer: `url('data/server.webp')`,
+        technician: `url('data/technician.webp')`,
       },
       height: {
-        almost: '70vh',
+        almost: '80vh',
       },
     },
   },

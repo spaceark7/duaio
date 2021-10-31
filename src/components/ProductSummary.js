@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const ProductSummary = ({ productName, image, desc }) => {
   return (
-    <div className='relative w-screen py-8  flex flex-col px-8 bg-mGradientLeft '>
+    <div className='relative w-screen pt-8 pb-12  flex flex-col px-8 bg-mGradientLeft '>
       <div className='bg-mGradientLeft flex flex-col justify-center items-center  gap-8 '>
         <h2 className='text-2xl leading-7 font-semibold text-white text-left '>
           {productName}

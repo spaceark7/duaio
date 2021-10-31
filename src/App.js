@@ -4,7 +4,7 @@ import DetailPage from './pages/DetailPage'
 
 function App() {
   return (
-    <div className='App'>
+    <div className='App overflow-x-hidden'>
       <Router>
         <Route path='/' exact component={HomePage} />
         <Route path='/detail/:category' component={DetailPage} />
