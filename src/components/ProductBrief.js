@@ -4,13 +4,13 @@ import { BsArrowUpRightSquareFill } from 'react-icons/bs'
 
 const ProductBrief = ({ title, desc, image, isGrey, link, imageTop }) => {
   return (
-    <div
-      className={`py-8 px-8 h-screen w-full  ${
-        isGrey ? 'bg-gray-100' : 'bg-white'
-      }  pb-8`}
-    >
+    <>
       {imageTop ? (
-        <>
+        <div
+          className={`py-8 px-8 h-almost w-full  ${
+            isGrey ? 'bg-gray-100' : 'bg-white'
+          }  pb-8`}
+        >
           <div className='rounded-lg py-2 pt-4 h-4/6 '>
             <img
               className='rounded-lg h-full w-full object-cover object-center-bottom cursor-pointer  transition duration-700 transform hover:-translate-y-4  ease-out'
@@ -31,9 +31,13 @@ const ProductBrief = ({ title, desc, image, isGrey, link, imageTop }) => {
               {desc}
             </p>
           </div>
-        </>
+        </div>
       ) : (
-        <>
+        <div
+          className={`py-8 px-8 h-screen w-full  ${
+            isGrey ? 'bg-gray-100' : 'bg-white'
+          }  pb-8`}
+        >
           <div className='h-2/6'>
             <h1
               className={`font-sans pt-10 text-mGradientLeft
@@ -66,9 +70,9 @@ const ProductBrief = ({ title, desc, image, isGrey, link, imageTop }) => {
               alt=''
             />
           </div>
-        </>
+        </div>
       )}
-    </div>
+    </>
   )
 }
 

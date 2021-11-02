@@ -62,7 +62,7 @@ const DetailPage = ({ match, history, location }) => {
       <ProductBrief
         imageTop={true}
         title='Selalu Siap Untuk Maintenance'
-        desc='Teknisi kami selalu siap untuk melakukan maintenance/pemeliharaan sistem CCTV anda, Serta pemeriksaan seluruh sistem yang berpotensi menjadi permasalahan dikemudian hari.'
+        desc='Teknisi kami selalu siap untuk melakukan pemeliharaan & pemeriksaan seluruh sistem yang berpotensi masalah dikemudian hari.'
         image='/images/Maintenance_tech.jpg'
       />
 
@@ -73,46 +73,54 @@ const DetailPage = ({ match, history, location }) => {
         image='/images/smartphone_cctv.jpg'
       />
 
-      <div className='w-full h-almost px-8'>
+      <div className='w-screen bg-white h-almost py-8 '>
+        <h1
+          className={`font-sans pt-10 text-mGradientLeft
+         font-bold  text-2xl text-center  mx-auto pb-8`}
+        >
+          Kategori
+        </h1>
+
         <Swiper
-          autoHeight
           style={{
             '--swiper-navigation-color': '#fff',
             '--swiper-pagination-color': '#fff',
             '--swiper-navigation-size': '24px',
           }}
-          slidesPerView={'auto'}
-          centeredSlides
-          spaceBetween={10}
+          slidesOffsetAfter={200}
+          speed={500}
+          centeredSlides={true}
+          slidesPerView={1}
           pagination={{
             clickable: true,
             dynamicBullets: true,
           }}
         >
-          <SwiperSlide>
-            <div className='h-80 w-1/2 bg-business bg-cover px-12'>
+          <SwiperSlide className='flex items-center'>
+            <div className='h-full w-10/12 mx-auto rounded-md bg-mGradientLeft px-4'>
+              <h3 className='text-base text-white pt-4'>Instalasi</h3>
               <h1
-                className={`font-sans pt-10 text-white
-         font-light  text-3xl   mx-auto pb-4 pr-10 `}
+                className={`font-sans pt-2 text-white
+         font-bold  text-3xl  mx-auto pb-4`}
               >
-                Kami Menawarkan Harga Yang Terjangkau Untuk Anda.
+                Untuk Gedung
               </h1>
-              <p className='text-white pt-6 text-opacity-80 '>
-                Biaya yang kami tawarkan relatif murah dan kompetitif.
+              <p className='text-white pb-8'>
+                Kami akan mensurvey lokasi gedung/kantor anda untuk memberikan
+                rekomendasi titik pemasangan kamera yang krusial & memastikan
+                pemasangan jalur kabel secara optimal.
               </p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className='h-80 w-1/3 bg-engineer  bg-cover px-12'>
+          <SwiperSlide className='flex items-center'>
+            <div className='h-full w-10/12 mx-auto rounded-md bg-gray-200 px-4'>
+              <h3 className='text-base text-white pt-4'>Instalasi</h3>
               <h1
-                className={`font-sans pt-10 text-white
-         font-light  text-3xl   mx-auto pb-4 pr-10 `}
+                className={`font-sans pt-2 text-mGradientLeft
+         font-bold  text-3xl  mx-auto pb-4`}
               >
-                Kualitas Terbaik Dalam Pengerjaan Menjadi Prioritas Utama Kami.
+                Untuk Gedung
               </h1>
-              <p className='text-white pt-6 text-opacity-80 '>
-                Serta pemeliharaan yang mudah dilakukan.
-              </p>
             </div>
           </SwiperSlide>
         </Swiper>
