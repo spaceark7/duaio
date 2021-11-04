@@ -2,100 +2,184 @@ const data_detail = [
   {
     id: '1',
     detail_name: 'cctv',
-    detail_subtitle: 'lebih aman & lebih terkendali',
-    banner_path: 'cctv_head.jpg',
-    detail_desc_title: 'Aman & Terkendali',
-    detail_desc_description:
-      ' Anda lebih leluasa memiliki kendali dan keamanan. Kami menjamin hardware dan instalasi layanan sistem CCTV kami bisa memenuhi kebutuhan anda.',
-    detail_desc_image: '/images/safe_cctv.png',
-    detail_flow_title: 'Terintegrasi dengan Perangkat Mobile',
-    detail_flow_desc:
-      'Selain Terintegrasi dengan monitor kendali & PTZ controller,Sistem CCTV kami juga memungkinkan anda untuk mengakses dengan perangkat mobile anda.',
-    detail_flow_image: '/images/cctv_integration.png',
-    detail_prod: [
+    detail_subtitle: 'Kendali Penuh Keamanan Secara Praktis & Efisien.',
+    detail_brief: [
       {
         id: '1',
-        image: '/images/cctv_prod_business.png',
-        title: 'Pabrik & Gedung',
+        title: 'Lebih Hemat & Terjangkau',
+        description:
+          'Kami memberikan harga yang kompetitif dan membuka peluang bernegosiasi untuk menjalin kerjasama',
+        image: '/images/money.jpg',
+        isImagetop: true,
       },
       {
         id: '2',
-        image: '/images/cctv_prod_office.png',
-        title: 'Kantor & Toko',
+        title: 'Selalu Siap Untuk Maintenance',
+        description:
+          'Teknisi kami selalu siap untuk melakukan pemeliharaan & pemeriksaan seluruh sistem yang berpotensi masalah dikemudian hari.',
+        image: '/images/Maintenance_tech.jpg',
+        isImagetop: true,
       },
       {
         id: '3',
-        image: '/images/cctv_prod_smarthome.png',
-        title: 'Smart Home',
+        title: 'Akses Dimanapun Anda Berada',
+        description:
+          'Sistem kami mendukung monitoring CCTV anda melalui ponsel pintar dan perangkat mobile lainnya. ',
+        image: '/images/smartphone_cctv.jpg',
+        isImagetop: true,
       },
     ],
+    category: [
+      {
+        id: '1',
+        header: 'Installasi',
+        title: 'Untuk Gedung',
+        description:
+          '  Kami akan mensurvey lokasi gedung/kantor anda untuk memberikan rekomendasi titik pemasangan kamera yang krusial & memastikan pemasangan jalur kabel secara optimal.',
+      },
+      {
+        id: '2',
+        header: 'Installasi',
+        title: 'Untuk Rumah',
+        description:
+          'Kami akan mensurvey lokasi rumah anda untuk memberikan rekomendasi titik pemasangan kamera yang krusial & memastikan pemasangan jalur kabel secara optimal.',
+      },
+    ],
+    product_image: [
+      {
+        id: '1',
+        path: '/images/HikvisionLogo.png',
+      },
+      {
+        id: '2',
+        path: '/images/loewix_logo.png',
+      },
+    ],
+    banner_path: 'cctv_head.jpg',
   },
   {
     id: '2',
-    detail_name: 'Sistem Alarm Keamanan',
-    detail_subtitle: 'lebih aman & lebih terkendali',
-    banner_path: 'alarm',
-    detail_desc_title: 'Lengkapi Sistem Keamanan',
-    detail_desc_description:
-      'Sistem keamanan Alarm yang dilengkapi dengan Motion sensor, Magnetic door contact, Panic Button dan control panel 8 Zone. Menjadikan sistem keamanan lebih mutakhir',
-    detail_desc_image: '/images/safe_building.png',
-    detail_flow_title: 'Terintegrasi dengan Perangkat Mobile',
-    detail_flow_desc:
-      'Anda bisa mengakses sistem alarm dan mengontrol dengan menggunakan perangkat ponsel pintar anda',
-    detail_flow_image: '/images/alarm_integration.png',
-    detail_prod: [
+    detail_name: 'security alarm',
+    detail_subtitle: 'Kontrol Keamanan Untuk Setiap Akses Keluar Masuk',
+    detail_brief: [
       {
         id: '1',
-        image: '/images/alarm_hik.png',
-        title: 'HIK Vision Security System',
+        title: 'Cegah Dari Akses Yang Tidak Diinginkan',
+        description:
+          'Alarm akan mendeteksi setiap akses mencurigakan dan berbahaya seperti pencurian dan pembobolan.',
+        image: '/images/no_trespassing.jpg',
+        isImagetop: true,
       },
       {
         id: '2',
-        image: '/images/alarm_albox.png',
-        title: 'ALBOX Alarm Security System',
+        title: 'Kunci Pintu Digital',
+        description:
+          'Keamanan lebih optimal dengan kunci pintu digital yang menggunakan sistem passcode angka.',
+        image: '/images/door_lock.jpg',
+        isImagetop: true,
       },
       {
         id: '3',
-        image: '/images/alarm_paradox.png',
-        title: 'PARADOX Security System',
+        title: 'Kontrol Panel Dengan Voice, Keypad & Telepon',
+        description:
+          'Anda bisa mengaktifkan sistem alarm pada panel dengan menggunakan suara, tombol keypad ataupun telepon',
+        image: '/images/alarm_panel.jpg',
+        isImagetop: true,
       },
     ],
+    category: [
+      {
+        id: '1',
+        header: 'Installasi',
+        title: 'Untuk Gedung',
+        description:
+          '  Kami akan mensurvey lokasi gedung/kantor anda untuk memberikan rekomendasi pemasangan sistem keamanan yang krusial & memastikan pemasangan jalur kabel secara optimal.',
+      },
+      {
+        id: '2',
+        header: 'Installasi',
+        title: 'Untuk Rumah',
+        description:
+          'Kami akan mensurvey lokasi rumah anda untuk memberikan rekomendasi rekomendasi pemasangan sistem keamanan yang krusial & memastikan pemasangan jalur kabel secara optimal.',
+      },
+    ],
+    product_image: [
+      {
+        id: '1',
+        path: '/images/HikvisionLogo.png',
+      },
+      {
+        id: '2',
+        path: '/images/paradox_logo.png',
+      },
+      {
+        id: '3',
+        path: '/images/logo_albox.png',
+      },
+    ],
+    banner_path: 'secure_building.jpg',
   },
   {
     id: '3',
-    detail_name: 'Mesin Absensi Biometrik',
-    detail_subtitle: 'Lebih mutakhir & terorganisir',
-    banner_path: 'biometric',
-    detail_desc_title: 'Lebih Canggih & Praktis',
-    detail_desc_description:
-      'Mesin absensi biometrik kini menjadi standar umum absensi & kehadiran karywan untuk setiap perusahaan. Kami menyediakan berbagai macam model mesin absensi biometric',
-    detail_desc_image: '/images/safe_finger.png',
-    detail_flow_title: 'Lengkap Berbagai Model',
-    detail_flow_desc:
-      'Face Detection, Finger Scanner, atau RFID. Tersedia lengkap sesuai dengan kebutuhan anda.',
-    detail_flow_image: '/images/biometric_device.png',
-    detail_prod: [
+    detail_name: 'perangkat biometrik',
+    detail_subtitle: 'Absensi Kehadiran Kini Lebih Cepat & Praktis',
+    detail_brief: [
       {
         id: '1',
-        image: '/images/finger_device.png',
-        title: 'Perangkat berbasis sidik jari',
+        title: 'Pilihan Perangkat Lengkap',
+        description:
+          'Berbagai macam perangkat absensi kami sediakan, dimulai dari sidik jari, pengenalan wajah hingga menggunakan kartu.',
+        image: '/images/biometric_device.png',
+        isImagetop: true,
       },
       {
         id: '2',
-        image: '/images/face_device.png',
-        title: 'Perangkat berbasis pengenalan wajah',
+        title: 'Skalabilitas Tinggi',
+        description:
+          'Bagi anda yang mempunyai kebutuhan untuk ratusan bahkan ribuan karyawan, kami bisa memasang perangkat absensi yang terhubung satu sama lain.',
+        image: '/images/factory_worker.jpeg',
+        isImagetop: true,
       },
       {
         id: '3',
-        image: '/images/rfid_device.png',
-        title: 'Perangkat berbasis kartu',
-      },
-      {
-        id: '4',
-        image: '/images/pabx_device.png',
-        title: 'Telepon PABX (Up To 120 channel)',
+        title: 'Akses Data Absensi Pada Komputer',
+        description:
+          'Anda bisa mengakses data absensi karyawan anda langsung dengan menggunakan komputer untuk memproses data kehadiran.',
+        image: '/images/office_worker.jpg',
+        isImagetop: true,
       },
     ],
+    category: [
+      {
+        id: '1',
+        header: 'Installasi',
+        title: 'Untuk Kantor',
+        description:
+          '  Kami akan mensurvey lokasi gedung/kantor anda untuk memberikan rekomendasi pemasangan perangkat absensi & memastikan pemasangan jalur kabel secara optimal.',
+      },
+      {
+        id: '2',
+        header: 'Installasi',
+        title: 'Untuk Pabrik',
+        description:
+          'Kami akan mensurvey lokasi rumah anda untuk memberikan rekomendasi rekomendasi pemasangan perangkat absensi & memastikan jumlah perangkat yg dibutuhkan serta pemasangan jalur kabel secara optimal.',
+      },
+    ],
+    product_image: [
+      {
+        id: '1',
+        path: '/images/HikvisionLogo.png',
+      },
+      {
+        id: '2',
+        path: '/images/solution_logo.png',
+      },
+      {
+        id: '3',
+        path: '/images/amano_logo.png',
+      },
+    ],
+    banner_path: 'business_woman.webp',
   },
 ]
 

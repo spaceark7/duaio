@@ -121,6 +121,7 @@ const HomePage = () => {
         desc='Kami memberikan layanan pemasangan Sistem Alarm Gedung agar anda bisa mengontrol setiap akses sekitar anda.'
         image='images/security.jpg'
         isGrey={false}
+        link='/detail/security alarm'
       />
 
       <ProductBrief
@@ -128,6 +129,7 @@ const HomePage = () => {
         title='Lebih Akurat & Mudah Digunakan.'
         desc='Kami menyediakan perangkat attendace seperti FIngerprint, Face Detection dan RFID. Kami juga menyediakan pemasangan jalur telepon kantor (PABX).'
         isGrey={true}
+        link='/detail/perangkat biometrik'
       />
 
       <ProductBrief

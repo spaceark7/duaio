@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 import 'swiper/components/pagination/pagination.min.css'
 import { BiArrowBack } from 'react-icons/bi'
+import { BsFillTelephoneFill } from 'react-icons/bs'
+import { MdMail } from 'react-icons/md'
 
 import data_detail from '../data/DataDetail'
 import pagination from 'swiper/components/pagination'
@@ -45,7 +47,7 @@ const DetailPage = ({ match, history, location }) => {
             className={`font-sans pt-10 text-white
          font-light  text-6xl  mx-auto pb-4 pr-10 `}
           >
-            Kendali Penuh Keamanan Secara Praktis & Efisien.
+            {detail.detail_subtitle}
           </h1>
           <div className='w-full h-almost'></div>
         </div>
@@ -53,27 +55,17 @@ const DetailPage = ({ match, history, location }) => {
 
       {/* Body Section */}
 
-      <ProductBrief
-        imageTop={true}
-        title='Lebih Hemat & Terjangkau'
-        desc='Kami memberikan harga yang kompetitif dan membuka peluang bernegosiasi untuk menjalin kerjasama'
-        image='/images/money.jpg'
-      />
-      <ProductBrief
-        imageTop={true}
-        title='Selalu Siap Untuk Maintenance'
-        desc='Teknisi kami selalu siap untuk melakukan pemeliharaan & pemeriksaan seluruh sistem yang berpotensi masalah dikemudian hari.'
-        image='/images/Maintenance_tech.jpg'
-      />
+      {detail.detail_brief.map((brief) => (
+        <ProductBrief
+          key={brief.id}
+          imageTop={brief.isImagetop}
+          title={brief.title}
+          desc={brief.description}
+          image={brief.image}
+        />
+      ))}
 
-      <ProductBrief
-        imageTop={true}
-        title='Akses Dimanapun Anda Berada'
-        desc='Sistem kami mendukung monitoring CCTV anda melalui ponsel pintar dan perangkat mobile lainnya. '
-        image='/images/smartphone_cctv.jpg'
-      />
-
-      <div className='w-screen bg-white h-almost py-8 '>
+      <div className='w-screen bg-white h-full py-8 '>
         <h1
           className={`font-sans pt-10 text-mGradientLeft
          font-bold  text-2xl text-center  mx-auto pb-8`}
@@ -87,7 +79,7 @@ const DetailPage = ({ match, history, location }) => {
             '--swiper-pagination-color': '#fff',
             '--swiper-navigation-size': '24px',
           }}
-          slidesOffsetAfter={200}
+          spaceBetween={20}
           speed={500}
           centeredSlides={true}
           slidesPerView={1}
@@ -96,35 +88,89 @@ const DetailPage = ({ match, history, location }) => {
             dynamicBullets: true,
           }}
         >
-          <SwiperSlide className='flex items-center'>
-            <div className='h-full w-10/12 mx-auto rounded-md bg-mGradientLeft px-4'>
-              <h3 className='text-base text-white pt-4'>Instalasi</h3>
-              <h1
-                className={`font-sans pt-2 text-white
+          {detail.category.map((category) => (
+            <SwiperSlide key={category.id}>
+              <div className='h-96 w-10/12 mx-auto rounded-md bg-mGradientLeft px-4'>
+                <h3 className='text-base text-white pt-4'>{category.header}</h3>
+                <h1
+                  className={`font-sans pt-2 text-white
          font-bold  text-3xl  mx-auto pb-4`}
-              >
-                Untuk Gedung
-              </h1>
-              <p className='text-white pb-8'>
-                Kami akan mensurvey lokasi gedung/kantor anda untuk memberikan
-                rekomendasi titik pemasangan kamera yang krusial & memastikan
-                pemasangan jalur kabel secara optimal.
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className='flex items-center'>
-            <div className='h-full w-10/12 mx-auto rounded-md bg-gray-200 px-4'>
-              <h3 className='text-base text-white pt-4'>Instalasi</h3>
-              <h1
-                className={`font-sans pt-2 text-mGradientLeft
-         font-bold  text-3xl  mx-auto pb-4`}
-              >
-                Untuk Gedung
-              </h1>
-            </div>
-          </SwiperSlide>
+                >
+                  {category.title}
+                </h1>
+                <p className='text-white pb-8'>{category.description}</p>
+                <div className='border-2 border-white rounded-md p-2 w-max group hover:bg-white'>
+                  <h3 className='text-white group-hover:text-mGradientLeft '>
+                    Hubungi Kami
+                  </h3>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
+      <div className='w-full h-full pb-16 bg-white '>
+        <h1
+          className={`font-sans pt-10 text-mGradientLeft
+         font-bold  text-2xl text-center  mx-auto pb-8`}
+        >
+          Produk Yang Kami Gunakan
+        </h1>
+        <div className='grid grid-flow-col grid-rows-2 gap-4 px-8 items-center justify-end'>
+          {detail.product_image.map((product) => (
+            <img
+              key={product.id}
+              className='w-3/4'
+              src={product.path}
+              alt={product.path}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className='h-almost  bg-white py-4 px-8'>
+        <div className='w-full flex flex-col items-center justify-start '>
+          <img
+            className='object-scale-down  object-cover w-3/6'
+            src='/images/contact_bg.webp'
+            alt=''
+          />
+        </div>
+        <h1
+          className={`font-sans pt-2 text-mGradientLeft
+         font-light  text-4xl  mx-auto pb-2 pr-4  `}
+        >
+          Ada Pertanyaan?
+        </h1>
+        <p className='text-gray-700'>
+          Kami siap untuk membantu anda untuk berkonsultasi ataupun meminta
+          rekomendasi pemasangan ditempat anda.{' '}
+        </p>
+        <div className='w-full flex items-center flex-row pt-6 pb-2'>
+          <div className='bg-mGradientLeft rounded-full w-max p-2'>
+            <BsFillTelephoneFill className='text-white text-xl' />
+          </div>
+          <h2 className='font-semibold text-xl text-mGradientLeft ml-2'>
+            0812 - 1839 - 6779
+          </h2>
+        </div>
+        <div className='w-full flex items-center flex-row pt-4 '>
+          <div className='bg-mGradientLeft rounded-full w-max p-2'>
+            <MdMail className='text-white text-xl' />
+          </div>
+          <h2 className='font-semibold text-base text-mGradientLeft ml-2'>
+            pandupurnama300819@gmail.com
+          </h2>
+        </div>
+      </div>
+
+      <footer className='w-full py-4 px-4  bg-mGradientRight flex flex-col justify-between items-center py-2 gap-2 '>
+        <img className='w-1/3 opacity-40' src='/images/logo_big.png' alt='' />
+        <h2 className='text-white text-xs opacity-50 text-center w-3/4'>
+          Ruko inkopal blok C. Sunter boulevard barat, Kelapa Gading, Jakarta
+          Utara
+        </h2>
+      </footer>
     </div>
   )
 }
