@@ -16,6 +16,9 @@ const Banner = ({ image, title, subtitle, desc }) => {
         <p className='text-base font-sans  text-blue-200 mt-6 leading-2 '>
           {desc}
         </p>
+        <div className='border-2 border-white rounded-full w-max py-2 px-4 mt-10'>
+          <h3 className='text-lg'>Telusuri Layanan Kami</h3>
+        </div>
       </div>
     </div>
   )

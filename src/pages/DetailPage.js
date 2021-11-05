@@ -33,7 +33,7 @@ const DetailPage = ({ match, history, location }) => {
     <div className='w-screen h-full'>
       <div
         style={{ backgroundImage: `url(/images/${detail.banner_path})` }}
-        className={`relative w-full h-screen  bg-no-repeat bg-top-right`}
+        className={`relative w-full h-screen bg-cover  bg-no-repeat bg-top-right`}
       >
         <div
           onClick={goBack}
@@ -116,14 +116,16 @@ const DetailPage = ({ match, history, location }) => {
         >
           Produk Yang Kami Gunakan
         </h1>
-        <div className='grid grid-flow-col grid-rows-2 gap-4 px-8 items-center justify-end'>
+        <div className='grid grid-flow-col grid-rows-2 gap-4 px-8 items-center justify-center'>
           {detail.product_image.map((product) => (
-            <img
-              key={product.id}
-              className='w-3/4'
-              src={product.path}
-              alt={product.path}
-            />
+            <div className='flex  items-center '>
+              <img
+                key={product.id}
+                className='w-3/4 mx-auto'
+                src={product.path}
+                alt={product.path}
+              />
+            </div>
           ))}
         </div>
       </div>

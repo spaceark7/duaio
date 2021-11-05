@@ -27,6 +27,7 @@ module.exports = {
         engineer: `url('data/server.webp')`,
         technician: `url('data/technician.webp')`,
         detail_contact: `url('data/contact_bg.webp')`,
+        cs: `url('data/cs.webp')`,
       },
       height: {
         almost: '80vh',

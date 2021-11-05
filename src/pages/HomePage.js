@@ -3,6 +3,7 @@ import Banner from '../components/Banner'
 import ProductBrief from '../components/ProductBrief'
 import { Link } from 'react-router-dom'
 import { BsArrowUpRightSquareFill } from 'react-icons/bs'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 
 import SwiperCore from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -21,7 +22,7 @@ const HomePage = () => {
         image='/images/logo_big.png'
         title='All In One Solution untuk Bisnis dan Perusahaan Anda.'
         subtitle=''
-        desc='Kami hadir sebagai solusi terbaik untuk pemasangan CCTV keamanan, Sistem Alarm Keamanan Gedung, Instalasi Listrik Rumah, Instalasi Jaringan kabel atau nirkabel, dan perlengkapan gedung lainnya.'
+        desc='Solusi terbaik untuk Segala Kebutuhan Operasional Anda.'
       />
 
       <div className={` bg-white h-screen py-12 px-4 `}>
@@ -133,54 +134,38 @@ const HomePage = () => {
       />
 
       <ProductBrief
-        isGradient={true}
-        title='Penanganan Jaringan Telepon & Internet Semakin Praktis'
+        isGrey={false}
+        title='Perlengkapan Gedung Lainnya'
         image='/images/network_cable.jpg'
-        desc='Tak perlu repot memelihara perlengkapan gedung/kantor anda. Kami disini siap melayani semua kebutuhan penunjang operasional anda.'
+        desc='Kami juga memberikan layanan pemasangan jalur kabel jaringan internet, instalasi listrik rumah, pemasangan filter air dan lainnya'
+        link='/detail/perlengkapan gedung'
       />
 
-      <div className='w-full h-96 bg-blend-screen bg-tech bg-cover bg-left py-6 px-8 pr-12 '>
+      <div className='w-full flex justify-center h-96 bg-blend-screen bg-tech bg-cover bg-left py-6 px-8 pr-12 '>
         <h1
           className={`font-sans pt-10 text-white
          font-light  text-4xl  mx-auto pb-4`}
         >
           Kami berkomitmen untuk menjadi solusi layanan bagi bisnis anda.
         </h1>
-        <div className='py-6 '>
-          <Link
-            className='flex items-center gap-2 bg-mGradientLeft w-max px-2 py-1 rounded-md transition duration-300 hover:bg-green-500 text-white   transition '
-            to='/'
-          >
-            <h2 className='font-semibold '>Ambil Tawaran</h2>
-            <BsArrowUpRightSquareFill className='hover:animate-bounce' />
-          </Link>
-        </div>
       </div>
 
       <div className='flex w-full flex-col h-auto bg-white pt-8 '>
-        <div className='pl-6 pr-2 w-full flex flex-col justify-center items-center '>
+        <div className='pl-6 pr-2 w-full flex flex-col justify-start  '>
           <h2 className='font-bold text-2xl text-mGradientLeft'>
-            Hubungi Kami
+            Kami Siap Membantu
           </h2>
 
-          <p className=' mt-2 text-sm text-gray-500 mt-2 text-center'>
+          <p className=' mt-2  text-gray-500 mt-2 text-left'>
             Dapatkan penawaran terbaik sekarang! kami terbuka untuk konsultasi
             dan negosiasi.
           </p>
-          <a className='mt-4 w-max' href='#'>
-            <div className='flex  border-2 border-green-500 rounded-sm w-max'>
-              <div className='bg-green-500 m-0 p-0'>
-                <h2 className='text-sm p-1  font-medium text-white'>
-                  WhatsApp
-                </h2>
-              </div>
-              <div className='p-1'>
-                <h2 className='text-sm font-medium text-green-500'>
-                  klik disini
-                </h2>
-              </div>
+          <Link to='/contact-us'>
+            <div className='flex flex-row gap-2 items-center text-mGradientLeft pt-6'>
+              <p className='font-medium'>Hubungi Kami</p>
+              <AiOutlineArrowRight />
             </div>
-          </a>
+          </Link>
         </div>
         <div className='w-full h-72 pt-8'>
           <img
