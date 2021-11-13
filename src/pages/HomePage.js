@@ -2,7 +2,7 @@ import React from 'react'
 import Banner from '../components/Banner'
 import ProductBrief from '../components/ProductBrief'
 import { Link } from 'react-router-dom'
-import { BsArrowUpRightSquareFill } from 'react-icons/bs'
+
 import { AiOutlineArrowRight } from 'react-icons/ai'
 
 import SwiperCore from 'swiper'
@@ -17,7 +17,7 @@ SwiperCore.use([pagination, navigation])
 
 const HomePage = () => {
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full pt-7'>
       <Banner
         image='/images/logo_big.png'
         title='All In One Solution untuk Bisnis dan Perusahaan Anda.'

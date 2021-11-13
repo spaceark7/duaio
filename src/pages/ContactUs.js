@@ -36,7 +36,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className='w-full h-1/2 px-8 pb-16'>
+      <div className='w-full h-1/2 px-8 pb-16 bg-white'>
         <h1
           className={`font-sans pt-10 text-mGradientLeft
          font-bold  text-2xl      mx-auto pb-8`}
